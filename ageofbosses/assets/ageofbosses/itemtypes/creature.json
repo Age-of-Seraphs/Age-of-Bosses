@@ -1,0 +1,74 @@
+{
+	code: "creature",
+	class: "ItemCreature",
+	maxstacksize: 64,
+	variantgroups: [
+		{ code: "type", states: [
+			"largelocust-bronze", "largelocust-corrupt", "largelocust-corrupt-sawblade",
+			"largelocust-bronze-hacked", "largelocust-corrupt-hacked"
+		  ] }
+	],
+	attributes: {
+		setGuardedEntityAttributeByType: {
+			"*-largelocust-bronze-hacked": true,
+			"*-largelocust-corrupt-hacked": true
+		},
+		handbook: {
+			excludeByType: {
+				"*-largelocust-*": true
+			}
+		}
+	},
+	shapeByType: {
+		"*-largelocust-bronze-hacked": { base: "entity/lore/largelocust/largelocust-bronze" },
+		"*-largelocust-corrupt-hacked": { base: "entity/lore/largelocust/largelocust-corrupt" },
+		"*-largelocust-bronze": { base: "entity/lore/largelocust/largelocust-bronze" },
+		"*-largelocust-corrupt": { base: "entity/lore/largelocust/largelocust-corrupt" },
+		"*-largelocust-corrupt-sawblade": { base: "entity/lore/largelocust/largelocust-corrupt-sawblade" },
+
+		"*": { base: "entity/land/{type}" }
+	},
+	texturesByType: {
+		"*-largelocust-bronze-hacked": { "skin": { base: "entity/lore/largelocust/bronze-hacked" } },
+		"*-largelocust-corrupt-hacked": { "skin": { base: "entity/lore/largelocust/corrupt-hacked" } }
+	},
+	creativeinventory: {
+		"general": [ "*" ],
+		"items": [ "*" ],
+		"creatures": [ "*" ],
+		"ageofbosses": [ "*" ]
+	},
+	materialDensity: 600,
+	guiTransformByType: {
+		"creature-largelocust-corrupt-sawblade": {
+			rotate: true,
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: -18, y: -130, z: -180 },
+			origin: { x: 0.6, y: 0.4, z: 0.5 },
+			scale: 1.45
+		},
+		"creature-largelocust-*": {
+			rotate: true,
+			translation: { x: 2, y: 0, z: 0 },
+			rotation: { x: -20, y: -127, z: -180 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 1.88
+		}
+	},	
+	tpHandTransformByType: {
+		"creature-largelocust-*": {
+			translation: { x: -1.1, y: -0.3, z: -0.7 },
+			rotation: { x: -159, y: -21, z: -89 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 0.53
+		}
+	},
+	groundTransformByType: {
+		"*-largelocust-*": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 0, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0, z: 0.5299 },
+			scale: 1.95
+		}
+	}
+}

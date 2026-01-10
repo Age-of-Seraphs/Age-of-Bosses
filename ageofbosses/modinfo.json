@@ -1,13 +1,14 @@
 {
     "$schema": "https://moddbcdn.vintagestory.at/schema/modinfo.latest.json",
     "type": "Code",
-    "modid": "ageofbosses",
-    "name": "ageofbosses",
+    "modid": "agefbosses",
+    "name": "Age of Bosses",
     "authors": [
-        "Unknown"
+      "Emikei",
+      "Captanredbeard"
     ],
-    "description": "To be added",
-    "version": "1.0.0",
+    "description": "Various boss and miniboss monsters for the Age of Seraphs server",
+    "version": "0.1.0",
     "dependencies": {
         "game": "1.21.0"
     }
