@@ -4,33 +4,34 @@
 	maxstacksize: 64,
 	variantgroups: [
 		{ code: "type", states: [
-			"largelocust-bronze", "largelocust-corrupt", "largelocust-corrupt-sawblade",
-			"largelocust-bronze-hacked", "largelocust-corrupt-hacked"
+			"locust-large-bronze", "locust-large-corrupt", "locust-large-queen", "locust-large-exploder",
+			"locust-large-bronze-hacked", "locust-large-corrupt-hacked"
 		  ] }
 	],
 	attributes: {
 		setGuardedEntityAttributeByType: {
-			"*-largelocust-bronze-hacked": true,
-			"*-largelocust-corrupt-hacked": true
+			"*-locust-large-bronze-hacked": true,
+			"*-locust-large-corrupt-hacked": true
 		},
 		handbook: {
 			excludeByType: {
-				"*-largelocust-*": true
+				"*-locust-large-*": true
 			}
 		}
 	},
 	shapeByType: {
-		"*-largelocust-bronze-hacked": { base: "entity/lore/largelocust/largelocust-bronze" },
-		"*-largelocust-corrupt-hacked": { base: "entity/lore/largelocust/largelocust-corrupt" },
-		"*-largelocust-bronze": { base: "entity/lore/largelocust/largelocust-bronze" },
-		"*-largelocust-corrupt": { base: "entity/lore/largelocust/largelocust-corrupt" },
-		"*-largelocust-corrupt-sawblade": { base: "entity/lore/largelocust/largelocust-corrupt-sawblade" },
-
+		"*-locust-large-bronze-hacked": { base: "entity/lore/largelocust/locust-large-bronze" },
+		"*-locust-large-corrupt-hacked": { base: "entity/lore/largelocust/locust-large-corrupt" },
+		"*-locust-large-bronze": { base: "entity/lore/largelocust/locust-large-bronze" },
+		"*-locust-large-corrupt": { base: "entity/lore/largelocust/locust-large-corrupt" },
+		"*-locust-large-queen": { base: "entity/lore/largelocust/locust-large-queen" },
+		"*-locust-large-exploder": { base: "entity/lore/largelocust/locust-large-exploder" },
+		"*-locust-large-corrupt-sawblade": { base: "entity/lore/locust-large/locust-large-corrupt-sawblade" },
 		"*": { base: "entity/land/{type}" }
 	},
 	texturesByType: {
-		"*-largelocust-bronze-hacked": { "skin": { base: "entity/lore/largelocust/bronze-hacked" } },
-		"*-largelocust-corrupt-hacked": { "skin": { base: "entity/lore/largelocust/corrupt-hacked" } }
+		"*-locust-large-bronze-hacked": { "largelocusttex": { base: "entity/largelocusttex-tamed" } },
+		"*-locust-large-corrupt-hacked": { "largelocusttex": { base: "entity/largelocusttex-tamed" } }
 	},
 	creativeinventory: {
 		"general": [ "*" ],
@@ -40,14 +41,14 @@
 	},
 	materialDensity: 600,
 	guiTransformByType: {
-		"creature-largelocust-corrupt-sawblade": {
+		"creature-locust-large-corrupt-sawblade": {
 			rotate: true,
 			translation: { x: 0, y: 0, z: 0 },
 			rotation: { x: -18, y: -130, z: -180 },
 			origin: { x: 0.6, y: 0.4, z: 0.5 },
 			scale: 1.45
 		},
-		"creature-largelocust-*": {
+		"creature-locust-large-*": {
 			rotate: true,
 			translation: { x: 2, y: 0, z: 0 },
 			rotation: { x: -20, y: -127, z: -180 },
@@ -56,7 +57,7 @@
 		}
 	},	
 	tpHandTransformByType: {
-		"creature-largelocust-*": {
+		"creature-locust-large-*": {
 			translation: { x: -1.1, y: -0.3, z: -0.7 },
 			rotation: { x: -159, y: -21, z: -89 },
 			origin: { x: 0.5, y: 0.2, z: 0.5 },
@@ -64,7 +65,7 @@
 		}
 	},
 	groundTransformByType: {
-		"*-largelocust-*": {
+		"*-locust-large-*": {
 			translation: { x: 0, y: 0, z: 0 },
 			rotation: { x: 0, y: 0, z: 0 },
 			origin: { x: 0.5, y: 0, z: 0.5299 },

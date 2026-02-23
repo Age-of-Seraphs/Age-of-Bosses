@@ -1,8 +1,8 @@
 {
-	code: "largelocust",
+	code: "locust-large",
 	class: "EntityLocust",
 	tags: ["mechanical", "habitat-land"],
-	variantgroups:  [ { code: "type", states: ["bronze", "corrupt", "corrupt-sawblade" ] } ] ,
+	variantgroups:  [ { code: "type", states: ["bronze", "corrupt" ] } ] ,
 	weight: 90,
 	canClimb: true,
 	canClimbAnywhere: true,
@@ -16,12 +16,12 @@
 		spawnDamageParticles: true,
 		isMechanical: true,
 		hackedEntityByType: {
-			"*-bronze": "largelocust-bronze-hacked",
-			"*-corrupt": "largelocust-corrupt-hacked"
+			"*-bronze": "locust-large-bronze-hacked",
+			"*-corrupt": "locust-large-corrupt-hacked"
 		}
 	},
 	dropsByType: {
-		"largelocust-corrupt-sawblade": [
+		"locust-large-corrupt-sawblade": [
 			{
 				type: "item",
 				code: "game:gear-rusty",
@@ -56,7 +56,7 @@
 	},
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/lore/largelocust/largelocust-{type}" },
+		shape: { base: "entity/lore/largelocust/locust-large-{type}" },
 		size: 1.2,
 		glowLevelByType: {
 			"*-bronze": 16,

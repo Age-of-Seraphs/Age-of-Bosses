@@ -1,27 +1,32 @@
-﻿using Vintagestory.API.Client;
+using System;
+using System.Text;
+using System.Reflection;
+using System.Collections.Generic;
 using Vintagestory.API.Common;
+using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Config;
+using Vintagestory.API.Datastructures;
+using Vintagestory.API.MathTools;
+using Vintagestory.GameContent;
+using Vintagestory.API.Client;
 using Vintagestory.API.Server;
+using System.Runtime;
+using AgeOfBosses;
+using Vintagestory.API.Util;
 
-namespace ageofbosses
+namespace AgeOfBosses
 {
-    public class ageofbossesModSystem : ModSystem
+
+
+    public class AgeOfBosses : ModSystem
     {
-        // Called on server and client
-        // Useful for registering block/entity classes on both sides
         public override void Start(ICoreAPI api)
         {
-            Mod.Logger.Notification("Hello from template mod: " + api.Side);
-        }
-
-        public override void StartServerSide(ICoreServerAPI api)
-        {
-            Mod.Logger.Notification("Hello from template mod server side: " + Lang.Get("ageofbosses:hello"));
-        }
-
-        public override void StartClientSide(ICoreClientAPI api)
-        {
-            Mod.Logger.Notification("Hello from template mod client side: " + Lang.Get("ageofbosses:hello"));
+            AiTaskRegistry.Register<AiTaskExploderAttack>("ageofbossesexploderattack");
+            AiTaskRegistry.Register<AiTaskSeekAndReviveDeadEntity>("ageofbossesseekandrevivedeadentity");
+            //api.RegisterEntityBehaviorClass ("repairablelocustcommandable", typeof(EntityBehaviorRepairableLocustCommandable));
+            //api.RegisterEntity ("EntityRepairableLocust", typeof(EntityRepairableLocust));
+            //api.RegisterItemClass("ItemHackedLocustSpawner", typeof(ItemHackedLocustSpawner));
         }
     }
 }

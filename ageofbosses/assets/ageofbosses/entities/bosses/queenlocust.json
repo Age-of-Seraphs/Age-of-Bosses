@@ -1,6 +1,0 @@
-{
-  "enabled": false,
-  "code": "largelocust",
-  "class": "EntityLocust",
-  "tags": [ "mechanical", "boss", "habitat-land" ]
-}

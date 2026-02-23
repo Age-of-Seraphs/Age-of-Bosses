@@ -3,10 +3,10 @@
     "type": "Code",
     "modid": "agefbosses",
     "name": "Age of Bosses",
-    "authors": [
-      "Emikei",
-      "Captanredbeard"
-    ],
+  "authors": [
+    "Captanredbeard",
+    "hYPERION"
+  ],
     "description": "Various boss and miniboss monsters for the Age of Seraphs server",
     "version": "0.1.0",
     "dependencies": {
